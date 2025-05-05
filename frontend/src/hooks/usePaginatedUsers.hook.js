@@ -1,4 +1,4 @@
-// hooks/usePaginatedUsers.hook.js
+
 import { axiosInstance } from "../utils/axiosInstance.util.js";
 
 export async function usePaginatedUsers(page, limit) {

@@ -10,7 +10,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 const columnHelper = createColumnHelper();
 
-const DemoTable = () => {
+const UsersTable = () => {
   const [users, setUsers] = useState([]);
   const [hasMore, setHasMore] = useState(true);
   const [loading, setLoading] = useState(false);
@@ -99,7 +99,7 @@ const DemoTable = () => {
     overscan: 10,
   });
 
-  // ✅ Memoized virtual rows and paddings
+
   const { virtualRows, paddingTop, paddingBottom } = useMemo(() => {
     const virtualItems = rowVirtualizer.getVirtualItems();
     const paddingTop = virtualItems.length > 0 ? virtualItems[0].start : 0;
@@ -123,10 +123,8 @@ const DemoTable = () => {
 return (
   <div className="h-screen flex flex-col p-8">
   
-    <h2 className="text-xl font-bold mb-4">Simple Table</h2>
-    <div>
-    <input type="text" placeholder="Serach Users" />
-    </div>
+    <h2 className="text-xl font-bold mb-4">Users Table</h2>
+  
    
     <div className="flex-1 border border-gray-300 rounded-xl overflow-hidden shadow-sm">
     <div className="h-full overflow-auto scrollbar-hide" ref={parentRef}>
@@ -201,4 +199,4 @@ return (
 
 };
 
-export default DemoTable;
+export default UsersTable;

@@ -1,18 +1,11 @@
-
-import DemoTable from "./pages/DemoTable"
-import UserTable from "./pages/UserTable"
-
-
-
-
-
+import UsersTable from "./pages/UsersTable"
 
 function App() {
 
 
   return (
     <>
-   <DemoTable />
+  <UsersTable />
     </>
   )
 }
