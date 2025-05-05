@@ -10,7 +10,7 @@ const app = express();
 const PORT = ENV_VARS.PORT;
 
 app.use(cors({
-  origin: ENV_VARS.CLIENT_URL || "http://localhost:5173", 
+  origin: ENV_VARS.CLIENT_URL || "https://infinite-scroll-table.onrender.com", 
   methods: ["GET"]
 }));
 
